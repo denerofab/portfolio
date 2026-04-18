@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.topo {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 2px solid #334155;
+}
+
+.topo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.botoes-topo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.mensagem {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #1e293b;
+    border-left: 4px solid #3b82f6;
+    border-radius: 8px;
+}
+
+.escondido {
+    display: none;
+}
+
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #60a5fa;
+    font-size: 1.8rem;
+}
+
+.sobre p {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    color: #e2e8f0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #93c5fd;
+}
+
+.card p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.caixa-detalhes {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 220px;
+    color: #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.caixa-detalhes h3 {
+    margin-bottom: 15px;
+    color: #93c5fd;
+}
+
+.caixa-detalhes p {
+    margin-bottom: 12px;
+}
+
+.caixa-detalhes ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.caixa-detalhes li {
+    margin-bottom: 8px;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #020617;
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .topo h1 {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3b82f6;
+    margin-bottom: 15px;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.acoes-curriculo {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#btnAbrirCurriculo {
+    background-color: #16a34a;
+}
