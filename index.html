@@ -10,67 +10,85 @@
   <header class="topo">
     <div class="container">
       <div class="perfil">
-  <img src="Dener1.jpeg" alt="Foto de Dener" class="foto-perfil" />
+        <img src="Dener1.jpeg" alt="Foto de Dener" class="foto-perfil" />
 
-  <h1 id="titulo">Dener Otávio</h1>
-      <p class="subtitulo">Estudante de TI focado em suporte, redes e desenvolvimento</p>
+        <h1 id="titulo">Dener Otávio</h1>
+        <p class="subtitulo">
+          Estudante de TI focado em suporte, redes e iniciante em desenvolvimento
+        </p>
 
-  <div class="acoes-curriculo">
-    <button id="btnAbrirCurriculo">Abrir currículo</button>
-  </div>
-</div>
-
-      <p id="mensagem" class="mensagem escondido">
-        Logo logo isso vai ser mais fácil do que parece, só não desista!
-      </p>
+        <div class="acoes-curriculo">
+          <button id="btnAbrirCurriculo">Abrir currículo</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="sobre">
       <h2>Sobre mim</h2>
-      <p>
+      <p><b>
         Meu nome é Dener Otávio, sou estudante de Gestão da Tecnologia da Informação
         e estou construindo minha transição para a área de TI. Neste portfólio,
-        apresento habilidades práticas voltadas para suporte técnico, redes,
-        formatação e instalação de sistemas operacionais.
-      </p>
+        apresento algumas habilidades práticas voltadas para suporte técnico,
+        redes e preparação de máquinas para uso.
+      </b></p>
     </section>
 
-    <section class="projetos">
+    <section class="habilidades">
       <h2>Habilidades</h2>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Diagnóstico de Rede</h3>
-          <p>
-            Identificação e resolução de problemas de conexão utilizando testes e comandos básicos.
-          </p>
-          <button class="btn-card" data-tipo="internet">Ver mais</button>
+      <div class="cards-habilidades">
+        <article class="skill-card">
+          <div class="skill-conteudo-base">
+            <h3>Diagnóstico de Rede</h3>
+          </div>
+
+          <div class="skill-overlay">
+            <p>
+              Análise inicial de falhas de conexão e testes básicos de conectividade.
+            </p>
+            <button class="btn-ver-mais" data-skill="rede">Ver mais</button>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Configuração de IP</h3>
-          <p>
-            Configuração manual de rede, incluindo IP, máscara, gateway e DNS.
-          </p>
-          <button class="btn-card" data-tipo="ip">Ver mais</button>
+        <article class="skill-card">
+          <div class="skill-conteudo-base">
+            <h3>Configuração de IP</h3>
+          </div>
+
+          <div class="skill-overlay">
+            <p>
+              Configuração manual de IP, máscara, gateway e DNS em redes locais.
+            </p>
+            <button class="btn-ver-mais" data-skill="ip">Ver mais</button>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Formatação e Instalação de Sistema</h3>
-          <p>
-            Formatação completa de máquinas, instalação de sistema operacional e preparação para uso.
-          </p>
-          <button class="btn-card" data-tipo="formatar">Ver mais</button>
+        <article class="skill-card">
+          <div class="skill-conteudo-base">
+            <h3>Formatação e Instalação</h3>
+          </div>
+
+          <div class="skill-overlay">
+            <p>
+              Preparação completa da máquina, desde backup até instalação do sistema.
+            </p>
+            <button class="btn-ver-mais" data-skill="formatacao">Ver mais</button>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="detalhes">
       <h2>Detalhes da habilidade</h2>
-      <div id="conteudoDetalhado" class="caixa-detalhes">
-        <p>Clique em <strong>Ver mais</strong> em uma habilidade para visualizar os detalhes.</p>
+
+      <div id="detalheHabilidade" class="caixa-detalhes fade-box">
+        <h3>Selecione uma habilidade</h3>
+        <p>
+          Passe o mouse sobre uma habilidade e clique em <strong>Ver mais</strong>
+          para visualizar uma descrição mais detalhada.
+        </p>
       </div>
     </section>
   </main>
