@@ -1,68 +1,77 @@
 const btnAbrirCurriculo = document.getElementById("btnAbrirCurriculo");
-const detalheHabilidade = document.getElementById("detalheHabilidade");
-const botoesVerMais = document.querySelectorAll(".btn-ver-mais");
-
-const detalhes = {
-    rede: {
-        titulo: "Diagnóstico de Rede",
-        descricao: `
-            Tenho conhecimento em diagnóstico básico de rede, realizando verificações
-            iniciais para identificar falhas de conexão em ambientes cabeados e sem fio.
-            Isso inclui testes de conectividade, análise do IP recebido e uso de
-            comandos como <strong>ipconfig</strong> e <strong>ping</strong> para validar
-            a comunicação da máquina com a rede local e externa.
-        `
-    },
-    ip: {
-        titulo: "Configuração de IP",
-        descricao: `
-            Tenho familiaridade com a configuração manual de IP, máscara de sub-rede,
-            gateway padrão e DNS em redes locais. Entendo a importância desses dados
-            para o funcionamento correto da comunicação entre dispositivos, sendo uma
-            habilidade útil para estações de trabalho, impressoras e equipamentos que
-            exigem endereçamento fixo.
-        `
-    },
-    formatacao: {
-        titulo: "Formatação e Instalação de Sistema",
-        descricao: `
-            Tenho experiência com preparação de máquinas para uso, incluindo backup de
-            arquivos importantes, criação de mídia bootável, configuração de boot,
-            instalação do sistema operacional, drivers, atualizações e programas
-            essenciais. O objetivo é deixar a máquina pronta, estável e funcional para
-            o usuário.
-        `
-    }
-};
+const conteudoDetalhado = document.getElementById("conteudoDetalhado");
+const botoesCards = document.querySelectorAll(".btn-card");
 
 btnAbrirCurriculo.addEventListener("click", () => {
     window.open("CurriDenerOFR.pdf", "_blank");
 });
 
-function atualizarDetalhe(skill) {
-    const item = detalhes[skill];
+const detalhes = {
+    internet: {
+        titulo: "Diagnóstico de Rede",
+        conteudo: `
+            <p>Capacidade de identificar e resolver problemas de conexão de rede a partir de uma análise inicial organizada.</p>
+            <ul>
+                <li>Verificação de cabos de rede e conexão Wi-Fi.</li>
+                <li>Reinício de modem e roteador quando necessário.</li>
+                <li>Uso de comandos como <strong>ipconfig</strong> e <strong>ping</strong>.</li>
+                <li>Teste de conectividade com rede interna e externa.</li>
+                <li>Identificação de falhas em adaptadores, roteador ou provedor.</li>
+            </ul>
+        `
+    },
+    ip: {
+        titulo: "Configuração de IP",
+        conteudo: `
+            <p>Configuração manual de rede em ambientes locais, compreendendo a função de cada parâmetro para o funcionamento correto da comunicação.</p>
+            <ul>
+                <li>Definição de IP fixo.</li>
+                <li>Configuração de máscara de sub-rede e gateway.</li>
+                <li>Configuração de DNS preferencial e alternativo.</li>
+                <li>Testes de conectividade com <strong>ping</strong>.</li>
+                <li>Prevenção de conflitos de IP na rede.</li>
+            </ul>
+        `
+    },
+    formatar: {
+        titulo: "Formatação e Instalação de Sistema",
+        conteudo: `
+            <p>Processo completo de preparação da máquina para uso, desde a organização inicial até a validação final do sistema.</p>
+            <ul>
+                <li>Backup de dados importantes antes do procedimento.</li>
+                <li>Criação de pendrive bootável.</li>
+                <li>Acesso à BIOS e configuração da ordem de boot.</li>
+                <li>Formatação do disco e escolha correta de partições.</li>
+                <li>Instalação do sistema operacional.</li>
+                <li>Instalação de drivers, atualizações e programas essenciais.</li>
+                <li>Validação final do funcionamento da máquina.</li>
+            </ul>
+        `
+    }
+};
+
+function mostrarConteudo(tipo) {
+    const item = detalhes[tipo];
 
     if (!item) {
         return;
     }
 
-    detalheHabilidade.classList.add("hidden-fade");
+    conteudoDetalhado.classList.add("hidden-fade");
 
     setTimeout(() => {
-        detalheHabilidade.innerHTML = `
+        conteudoDetalhado.innerHTML = `
             <h3>${item.titulo}</h3>
-            <p>${item.descricao}</p>
+            ${item.conteudo}
         `;
-
-        detalheHabilidade.classList.remove("hidden-fade");
+        conteudoDetalhado.classList.remove("hidden-fade");
     }, 250);
 }
 
-botoesVerMais.forEach((botao) => {
+botoesCards.forEach((botao) => {
     botao.addEventListener("click", (event) => {
         event.stopPropagation();
-
-        const skill = botao.dataset.skill;
-        atualizarDetalhe(skill);
+        const tipo = botao.dataset.tipo;
+        mostrarConteudo(tipo);
     });
 });
